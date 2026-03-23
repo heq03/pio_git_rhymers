@@ -8,8 +8,11 @@ public class DefaultCountingOutRhymer {
     public static final int STACK_FULL_INDICATOR = MAX_CAPACITY - 1;
 
     private final int[] numbers = new int[MAX_CAPACITY];
-
-    public int total = EMPTY_RHYMER_INDICATOR;
+    private int total = EMPTY_RHYMER_INDICATOR;
+  
+    public int getTotal() {
+        return total;
+    }
 
     public void countIn(int in) {
         if (!isFull())
@@ -27,7 +30,8 @@ public class DefaultCountingOutRhymer {
     protected int peekaboo() {
         if (callCheck())
             return DEFAULT_VALUE;
-        return numbers[total];
+        return numbers[getTotal()];
+
     }
 
     public int countOut() {
