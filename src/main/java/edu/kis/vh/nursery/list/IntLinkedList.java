@@ -2,11 +2,10 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
-    public static final int EMPTY_LIST_INDICATOR = -1;
     public static final int DEFAULT_VALUE = -1;
 
     Node last;
-    int i = EMPTY_LIST_INDICATOR;
+    int i;
 
     public void push(int i) {
         if (last == null)
